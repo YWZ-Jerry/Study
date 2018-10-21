@@ -1,9 +1,9 @@
 1. mysql set character
-  1.`SET character_set_client = utf8;`
-  2.`SET character_set_connection = utf8;`
-  3.`SET character_set_database = utf8;`
-  4.`SET character_set_results = utf8;`
-  5.`SET character_set_server = utf8;`
+  1. SET character_set_client = utf8;
+  2. SET character_set_connection = utf8;
+  3. SET character_set_database = utf8;
+  4. SET character_set_results = utf8;
+  5. SET character_set_server = utf8;
 2. mysql command
    mysql -u root -p
     1、给root加个密码ab12。
