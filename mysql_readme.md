@@ -37,4 +37,21 @@
     16. show warnings; -- 显示最后一个执行的语句所产生的错误、警告和通知。 
     17. show errors; -- 只显示最后一个执行语句所产生的错误。 
     18. show [storage] engines; --显示安装后的可用存储引擎和默认引擎。
-    
+   H1: user
+ 1 -- 查看系统用户
+ 2 select Host,User,Password from mysql.user;
+ 3 
+ 4 -- 创建一个远程用户 
+ 5 create user test identified by '123456'; 
+ 6 
+ 7 -- 分配权限 
+ 8 grant all privileges on *.* to 'test'@'%'identified by '123456' with grant option; 
+ 9 
+10 -- 刷新mysql用户权限
+11 flush privileges ; 
+12 
+13 -- 修改指定用户密码 
+14 update mysql.user set password=password('新密码') where User="test" and Host="localhost"; 
+15 
+16 -- 删除用户 
+17 delete from user where User='test' and Host='localhost';
